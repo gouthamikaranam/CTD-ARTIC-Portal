@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   color: #333;
   font-size: 2.5rem;
 }
@@ -43,6 +43,12 @@ h1 {
 
 #response {
   font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+#loadingspinner {
+   font-size: 20px;
   font-weight: bold;
   margin-top: 40px;
 }
