@@ -47,7 +47,7 @@ async function getEventData() {
                 loadingElement.innerHTML = "";
                 events.forEach(event => { // iterating each event and updating the DOM element html
                     let newHtml = responseElement.innerHTML + 
-                        "<br/>" + "<h2><h2>" + event.title + 
+                        "<br/>" + "<h3><h3>" + event.title + 
                         "<br/><br/>" + 
                         "<h4><h4>" + "Location : " + event.location + 
                         "<br/><br/>" + event.date_display +
@@ -79,7 +79,7 @@ async function getEducatorResourcesData() {
                 loadingElement.innerHTML = "";
                educatorResources.forEach(educatorResources => {
                     let newHtml = responseElement.innerHTML +
-                    "<br/>" + "<h2> <h2>" + educatorResources.title + 
+                    "<br/>" + "<h3> <h3>" + educatorResources.title + 
                     "<br/><br/>" +
                     "<h4><h4>" + educatorResources.copy + "<br/>" +
                     "<br/>" +
