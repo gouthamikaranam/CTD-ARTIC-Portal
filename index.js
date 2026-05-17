@@ -47,12 +47,12 @@ async function getEventData() {
                 loadingElement.innerHTML = "";
                 events.forEach(event => { // iterating each event and updating the DOM element html
                     let newHtml = responseElement.innerHTML + 
-                        "<br/>" + "<h3><h3>" + event.title + 
-                        "<br/><br/>" + 
-                        "<h4><h4>" + "Location : " + event.location + 
-                        "<br/><br/>" + event.date_display +
-                        "<br/>" + "RSVP Link :  "+ "<i><i>"+ event.rsvp_link +
-                        "<br/><br/>" + "<hr/>";
+                        '<article class="card">' +
+                        '<h3 class="card-title">' + event.title + '</h3>' +
+                        '<p class="card-meta"><strong>Location:</strong> ' + event.location + '</p>' +
+                        '<p class="card-meta"><strong>When:</strong> ' + event.date_display + '</p>' +
+                        '<p><a class="card-link" href="' + event.rsvp_link + '">RSVP Link</a></p>' +
+                        '</article>';
                     responseElement.innerHTML = newHtml;
                 });
             })
@@ -79,12 +79,11 @@ async function getEducatorResourcesData() {
                 loadingElement.innerHTML = "";
                educatorResources.forEach(educatorResources => {
                     let newHtml = responseElement.innerHTML +
-                    "<br/>" + "<h3> <h3>" + educatorResources.title + 
-                    "<br/><br/>" +
-                    "<h4><h4>" + educatorResources.copy + "<br/>" +
-                    "<br/>" +
-                    "website : " + "<i> <i>" + educatorResources.web_url + "<br/><br/>" +
-                    "<hr/>";
+                        '<article class="card">' +
+                        '<h3 class="card-title">' + educatorResources.title + '</h3>' +
+                        '<p class="card-body">' + educatorResources.copy + '</p>' +
+                        '<p><a class="card-link" href="' + educatorResources.web_url + '">Website</a></p>' +
+                        '</article>';
                     responseElement.innerHTML = newHtml;
                 });
             })
